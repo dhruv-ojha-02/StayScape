@@ -29,8 +29,6 @@ export default function ProfilePage() {
         return <Navigate to={'/login'} />
     }
 
-
-
     if (redirect) {
         return <Navigate to={redirect} />
     }
@@ -38,7 +36,7 @@ export default function ProfilePage() {
         <div>
             <AccountNav />
             {subpage == 'profile' && (
-                <div className="text-center max-2-lg mx-auto">
+                <div className="text-center max-w-lg mx-auto">
                     Logged in as {user.name} ({user.email})<br />
                     <button onClick={logout} className="primary max-w-sm mt-2">Logout</button>
                 </div>
